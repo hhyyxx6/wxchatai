@@ -13,7 +13,7 @@ LISTEN_LIST = [['L.', '提示词1']]
 # DeepSeek API 配置
 DEEPSEEK_API_KEY = 'sk-your-deepseek-api-key'
 # 硅基流动API注册地址，免费15元额度 https://cloud.siliconflow.cn/
-DEEPSEEK_BASE_URL = 'https://api.deepseek.com'
+DEEPSEEK_BASE_URL = 'https://platform.deepseek.com'
 # 硅基流动API的模型
 MODEL = 'deepseek-chat'
 
