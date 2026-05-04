@@ -1,48 +1,62 @@
-# 说明
-- 这是一个精简优化版的聊天机器人。通过wxauto收发微信消息，deepseek生成回复消息。
-- 原项目仓库：https://github.com/KouriChat/KouriChat
-- 本机器人拥有更优化的消息处理流程，更加拟人化的聊天服务。
-- 本版本致力于实现更加拟人化聊天效果，因此不提供生成语音、生成图片等功能。
-# 效果图
-<img src="Demo_Image/1.jpg" alt="示例图片1" width="300px">
-<img src="Demo_Image/2.jpg" alt="示例图片2" width="300px">
-<img src="Demo_Image/3.jpeg" alt="示例图片3" width="900px">
-<img src="Demo_Image/4.jpeg" alt="示例图片4" width="900px">
+# WeChat AI 聊天机器人
 
-# 版本号
-- v3.9
+基于 wxautox4 + DeepSeek 的微信自动回复机器人，支持私聊和群聊。
 
-# 目前支持的功能
-1. 自动回复
-2. 识别图片/表情包内容
-3. 群聊功能
-4. 多个微信用户/群聊同时聊天
-5. 给每个微信用户/群聊自由分配不同的提示词Prompt
-6. 时间感知
-7. 识别情绪回复表情包
-8. 主动发消息
-9. 合并处理多条消息和多个表情包
-10. 自行决定是否开启部分功能
-11. 使用WebUI启动程序、修改配置文件、生成和修改Prompt
-12. 记忆保存到Prompt
-13. 自动更新功能
+## 功能特性
 
+- **自动回复**：对接 DeepSeek API，根据预设人设进行智能对话
+- **图片识别**：对接 Moonshot AI 识别聊天中的图片和表情包内容
+- **多用户支持**：不同聊天对象可配置不同的 Prompt 人设
+- **群聊支持**：支持 @机器人回复 或接收全部群消息
+- **情绪识别**：根据回复内容自动发送对应的表情包
+- **主动消息**：用户长时间未回复时主动发起对话
+- **记忆管理**：自动总结对话并保存到 Prompt，实现长期记忆
+- **WebUI 配置**：网页端启动/停止 Bot、修改配置、编辑 Prompt
 
-# 使用前准备
-1. 申请硅基流动API https://cloud.siliconflow.cn/ （免费15元额度） 或 deepseek官方API
-2. 申请Moonshot API（用于图片和表情包识别）https://platform.moonshot.cn/ （免费15元额度）
-3. 请先安装python、pip，python版本应大于3.8
+## 环境要求
 
-# 使用方式：
-1. 登录电脑微信，确保在后台运行
-2. 运行 Run.bat 启动程序，等待自动安装依赖文件
-3. 在打开的网页中修改配置文件，填入你的API KEY
-4. 在页面右上角点击 'Prompt管理' 进入提示词管理页面
-5. 点击新建Prompt 文件名为'想要聊天的对象的微信昵称/群聊名称'.md (如 用户1.md) 作为人设提示词
-6. 如不创建将使用文件目录下的 prompt.md作为默认提示词
-7. 修改完后点击页面右上角'Start Bot'启动程序
-8. 如果想要自定义表情包请将表情包(.gif .png .jpg .jpeg)文件放入emojis中对应的文件夹中
+- Windows 系统
+- Python 3.8+
+- 电脑微信客户端（登录并保持后台运行）
 
-# 声明
-- 本项目基于 [KouriChat](https://github.com/KouriChat/KouriChat) 修改，遵循 **GNU GPL-3.0 或更高版本** 许可证。
-- 原项目版权归属：umaru (2025)。
+## 快速开始
+
+1. 申请 API Key：
+   - DeepSeek API：https://api.deepseek.com
+   - Moonshot API（图片识别）：https://platform.moonshot.cn
+2. 登录电脑微信
+3. 双击 `Run.bat` 启动，自动安装依赖并打开配置页面
+4. 在网页中填入 API Key，配置你要聊天的对象
+5. 点击 **Start Bot** 启动
+
+## 用户配置
+
+编辑 `config.py`，主要配置项：
+
+| 配置项 | 说明 |
+|--------|------|
+| `LISTEN_LIST` | 监听列表，格式：`[['微信昵称', 'Prompt文件名']]` |
+| `DEEPSEEK_API_KEY` | DeepSeek API 密钥 |
+| `DEEPSEEK_BASE_URL` | API 地址 |
+| `MODEL` | 模型名称 |
+| `MOONSHOT_API_KEY` | Moonshot API 密钥（图片识别） |
+| `TEMPERATURE` | 回复随机性 (0.0-1.0) |
+| `MAX_TOKEN` | 回复最大长度 |
+| `ENABLE_MEMORY` | 是否启用记忆功能 |
+| `ENABLE_AUTO_MESSAGE` | 是否启用主动消息 |
+
+## Prompt 管理
+
+在 `prompts/` 目录下创建 `{昵称}.md` 文件作为人设提示词，格式参考 `提示词1.md`。
+
+## 自定义表情包
+
+将表情包（.gif/.png/.jpg）放入 `emojis/` 对应情绪文件夹：
+- `happy/` - 开心
+- `sad/` - 难过
+- `angry/` - 生气
+- `neutral/` - 中性
+
+## 声明
+
+本项目基于 [KouriChat](https://github.com/KouriChat/KouriChat) 修改，遵循 **GNU GPL-3.0** 许可证。原项目版权归属 umaru (2025)。
