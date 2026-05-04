@@ -8,3 +8,4 @@ wxautox文件下载/
 WXAUTOX_LICENSE
 .env
 *.log
+config.py
