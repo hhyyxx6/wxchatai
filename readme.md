@@ -1,4 +1,4 @@
-# WeChat AI 聊天机器人
+# WeChat AI ChatBot v3.9.1
 
 基于 wxautox4 + DeepSeek 的微信自动回复机器人，支持私聊和群聊。
 
