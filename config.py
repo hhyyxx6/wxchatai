@@ -3,7 +3,6 @@
 # ***********************************************************************
 # Modified based on the KouriChat project
 # Copyright of the original project: Copyright (C) 2025, umaru
-# Copyright of this modification: Copyright (C) 2025, iwyxdxl
 # Licensed under GNU GPL-3.0 or higher, see the LICENSE file for details.
 # ***********************************************************************
 

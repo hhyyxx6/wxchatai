@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 # ***********************************************************************
-# Copyright of this file: Copyright (C) 2025, iwyxdxl
 # Licensed under GNU GPL-3.0 or higher, see the LICENSE file for details.
 # ***********************************************************************
 

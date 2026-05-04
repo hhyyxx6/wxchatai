@@ -1,11 +1,8 @@
 # 说明
 - 这是一个精简优化版的聊天机器人。通过wxauto收发微信消息，deepseek生成回复消息。
 - 原项目仓库：https://github.com/KouriChat/KouriChat
-- 本项目由iwyxdxl在原项目基础上修改创建。
 - 本机器人拥有更优化的消息处理流程，更加拟人化的聊天服务。
 - 本版本致力于实现更加拟人化聊天效果，因此不提供生成语音、生成图片等功能。
-- 欢迎加入QQ交流群 一群 617379532 二群 964162330
-
 # 效果图
 <img src="Demo_Image/1.jpg" alt="示例图片1" width="300px">
 <img src="Demo_Image/2.jpg" alt="示例图片2" width="300px">
@@ -46,10 +43,6 @@
 7. 修改完后点击页面右上角'Start Bot'启动程序
 8. 如果想要自定义表情包请将表情包(.gif .png .jpg .jpeg)文件放入emojis中对应的文件夹中
 
-# 联系我
-1. 邮箱iwyxdxl@gmail.com
-2. QQ 2025128651
-   
 # 声明
 - 本项目基于 [KouriChat](https://github.com/KouriChat/KouriChat) 修改，遵循 **GNU GPL-3.0 或更高版本** 许可证。
 - 原项目版权归属：umaru (2025)。
