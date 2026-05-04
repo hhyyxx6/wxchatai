@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+wxauto_logs/
+Memory_Temp/
+screenshot/
+wxauto文件/
+wxautox文件下载/
+WXAUTOX_LICENSE
+.env
+*.log
