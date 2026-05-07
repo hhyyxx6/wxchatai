@@ -60,3 +60,4 @@
 ## 声明
 
 本项目基于 [KouriChat](https://github.com/KouriChat/KouriChat) 修改，遵循 **GNU GPL-3.0** 许可证。原项目版权归属 umaru (2025)。
+如果有问题可以发送邮箱至huangyouxing0302@foxmail.com
